@@ -79,7 +79,8 @@ end
 
 function read_metadata_ccf(f::FITS)
     fields_to_save = [ :drp_extsnr, :drp_ccfjdmod, :drp_ccfrvmod, :drp_dvrmsmod]
-    fields_str_to_save = [ "EXTSNR", "CCFJDMOD", "CCFRVMOD", "DVRMSMOD"]
+    #fields_str_to_save = [ "EXTSNR", "CCFJDMOD", "CCFRVMOD", "DVRMSMOD"]
+    fields_str_to_save = [ "EXTSNR", "CCFJDMOD", "CCFRVMOD", "DVRMSMOD","BISMOD","EBISMOD","FWHMMOD"]
     dict = read_metadata_from_fits(f,fields=fields_to_save,fields_str=fields_str_to_save, hdu="CCFS")
 end
 
